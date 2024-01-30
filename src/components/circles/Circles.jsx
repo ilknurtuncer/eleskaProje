@@ -61,15 +61,14 @@ const Circles = () => {
   return (
     <section className="flex justify-center items-center mt-10 sm:mt-0 flex-wrap  ">
       <div className="">
-        <div className="flex justify-center items-start gap-10 flex-wrap  ">
+        <div className="flex justify-center items-start gap-11 flex-wrap  ">
           {Materials.map((material) => {
             return (
-              <div className="flex flex-col justify-between items-center sm:col-auto cursor-pointer">
+              <div className="flex flex-col justify-between items-center sm:col-auto cursor-pointer" key={material.id}>
                 <img
                   className=" w-24 border-2 p-3 border-gray-600 border-solid rounded-full"
                   src={material.img}
-                  alt=""
-                />
+                  alt={material.name} />
                 <div className="max-w-[80px] min-h-[40px] text-center break-normal mt-2">
                   <p className="">{material.name}</p>
                 </div>
